@@ -1,21 +1,7 @@
-#======================================
-# Paquetes
-#======================================
 
-library(caret)
-library(doSNOW)
-library(shiny)
+my.predict <- function(model, features){
 
-#======================================
-# Modulos
-#======================================
-
-source("modules/Train.R")
-source("modules/DataWrangling.R")
-source("modules/Predict.R")
-
-#======================================
-# Archivos
-#======================================
-
-train <- read.csv("train.csv")
+  pred <- predict(model(), features())
+  
+  result <- pred
+}
